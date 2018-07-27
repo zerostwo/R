@@ -167,4 +167,18 @@ summary(airquality)
 str(airquality)
 
 table(airquality$Ozone, useNA = "ifany")
+table(airquality$Month, airquality$Day)
+any(is.na(airquality$Ozone))
+sum(is.na(airquality$Ozone))
+all(airquality$Month<12)
+
+titanic <- as.data.frame(Titanic)
+head(titanic)
+dim(titanic)
+tail(titanic)
+summary(titanic)
+
+x<-xtabs(Freq~Class + Age, data = titanic)
+ftable(x)
+print(object.size(airquality), units = "Kb")
 
