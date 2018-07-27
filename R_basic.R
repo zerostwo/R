@@ -146,3 +146,25 @@ head(airquality)
 s <- split(airquality,airquality$Month)
 table(airquality$Month)
 lapply(s, function(x) colMeans(x[,c("Ozone", "Wind", "Temp")]))
+
+sapply(s, function(x) colMeans(x[,c("Ozone", "Wind", "Temp")],na.rm = TRUE))
+
+#sort and order
+x <- data.frame(v1 = 1:5, v2 = c(10,7,9,6,8), v3 = 11:15, v4 = c(1,1,2,2,1))
+sort(x$v2)
+sort(x$v2, decreasing = TRUE)
+
+order(x$v2)
+x[order(x$v2),]
+x[order(x$v4,x$v3,decreasing = TRUE),]
+
+#sumarize data
+head(airquality,10)
+tail(airquality,20)
+str(head)
+
+summary(airquality)
+str(airquality)
+
+table(airquality$Ozone, useNA = "ifany")
+
