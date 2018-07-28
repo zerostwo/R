@@ -41,3 +41,8 @@ hist(airquality$Temp)
 par(mfrow = c(1,1))
 boxplot(airquality$Wind)
 
+#lattice
+library(lattice)
+xyplot(Temp~Ozone, data = airquality)
+airquality$Month <- factor(airquality$Month)
+xyplot(Temp~Ozone|Month, data = airquality, layout = c(5,1))
