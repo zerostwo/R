@@ -45,4 +45,36 @@ boxplot(airquality$Wind)
 library(lattice)
 xyplot(Temp~Ozone, data = airquality)
 airquality$Month <- factor(airquality$Month)
-xyplot(Temp~Ozone|Month, data = airquality, layout = c(5,1))
+
+q <- xyplot(Temp~Ozone|Month, data = airquality, layout = c(5,1))
+print(q)
+class(q)
+
+set.seed(1)
+x <-  rnorm(100)
+f <- rep(0:1,each = 50)
+y <- x +f -f*x + rnorm(100,sd = 0.5)
+f <- factor(f,labels = c("group1","goup2"))
+xyplot(y~x|f, layout = c(2,1))
+
+xyplot(y~x|f, panel = function(x,y){
+  panel.xyplot(x,y)
+  panel.abline(v = mean(x),h = mean(y), lty = 2)
+  panel.lmline(x,y,col = "red")
+  
+})
+
+#ggolot2
+library(ggplot2)
+qplot(Wind,Temp,data = airquality,color= Month)
+qplot(Wind,Temp,data = airquality,color= I("red"))
+qplot(Wind,Temp,data = airquality,shape= Month)
+qplot(Wind,Temp,data = airquality,size= Month ,color = I("blue"))
+qplot(Wind,Temp,data = airquality,geom = c("point","smooth"),color = Month)
+qplot(Wind,Temp,data = airquality,facets = .~Month)
+qplot(Wind,Temp,data = airquality,facets = Month~.)
+qplot(Wind,data = airquality, facets = Month~.)
+qplot(y = Wind, data = airquality)
+qplot(Wind,data = airquality,geom = "density")
+qplot(Wind,data = airquality,geom = "dotplot")
+
