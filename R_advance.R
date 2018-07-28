@@ -78,3 +78,12 @@ qplot(y = Wind, data = airquality)
 qplot(Wind,data = airquality,geom = "density")
 qplot(Wind,data = airquality,geom = "dotplot")
 
+ggplot(airquality,aes(Wind,Temp)) + geom_point(color = "steelblue",alpha = 0.4, size = 5)
+ggplot(airquality,aes(Wind,Temp)) + geom_point(aes(color = Month),alpha = 0.4, size = 5)
+
+ggplot(airquality,aes(Wind,Temp)) + geom_point() + geom_smooth()
+ggplot(airquality,aes(Wind,Temp)) + geom_point() + stat_smooth()
+ggplot(airquality,aes(Wind,Temp)) + stat_smooth()
+ggplot(airquality,aes(Wind,Temp)) + stat_smooth(method = "lm",se = FALSE,aes(col=Month))
+ggplot(airquality,aes(Wind,Temp)) + stat_smooth(method = "lm",se = FALSE)
+
