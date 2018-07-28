@@ -30,3 +30,14 @@ legend("topright", pch = 1,col = c("red","blue","green","black"),legend = c(5,6,
 par("bg")
 par("col")
 par("mar")
+par("mfrow")
+par("mfcol")
+?par
+
+par(mfrow = c(1,2))
+hist(airquality$Wind)
+hist(airquality$Temp)
+
+par(mfrow = c(1,1))
+boxplot(airquality$Wind)
+
