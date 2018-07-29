@@ -44,3 +44,10 @@ names(x)
 ft
 names(ft) <- c("x", "y")
 head(ft)
+x <- list(a = 1,b = 1,c = 1)
+x
+m <- matrix(1:4, 2, 2)
+m
+dimnames(m) <- list(c("r1", "r2"),c("c1", "c2"))
+m
+dir()
