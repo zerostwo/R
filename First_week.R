@@ -51,3 +51,7 @@ m
 dimnames(m) <- list(c("r1", "r2"),c("c1", "c2"))
 m
 dir()
+source("Documents/R/First_week.R")
+readLines("line.txt")
+line <- read.table("line.txt",sep = " ", header = T)
+line
