@@ -86,4 +86,4 @@ ggplot(airquality,aes(Wind,Temp)) + geom_point() + stat_smooth()
 ggplot(airquality,aes(Wind,Temp)) + stat_smooth()
 ggplot(airquality,aes(Wind,Temp)) + stat_smooth(method = "lm",se = FALSE,aes(col=Month))
 ggplot(airquality,aes(Wind,Temp)) + stat_smooth(method = "lm",se = FALSE)
-
+duan
