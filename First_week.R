@@ -55,3 +55,13 @@ source("Documents/R/First_week.R")
 readLines("line.txt")
 line <- read.table("line.txt",sep = " ", header = T)
 line
+x <- c("a", "b", "C")
+x[1]
+x[x >= "b"]
+lg <- c(TRUE, FALSE, TRUE)
+x[lg]
+x <- list(foo = 1:4, bar = 0.6)
+x[1]
+x[[1]]
+x$bar
+x["bar"]
