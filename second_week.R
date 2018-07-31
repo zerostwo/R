@@ -88,3 +88,20 @@ while(z >=3 && z <= 10) {
   }
 }
 
+## fucntion
+add2 <- function(x, y) {
+  x + y
+}
+add2(1,1)
+
+above10 <- function(x) {
+  use <- x >10
+  x[use]
+}
+
+aboven <- function(x, n) {
+  use <- x > n
+  x[use]
+}
+x <- rnorm(1000000)
+hist(aboven(x, 1.5)) 
