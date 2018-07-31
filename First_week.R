@@ -60,8 +60,13 @@ x[1]
 x[x >= "b"]
 lg <- c(TRUE, FALSE, TRUE)
 x[lg]
-x <- list(foo = 1:4, bar = 0.6)
+x <- list(foo = 1:4, bar = 0.6, bar = "hello")
 x[1]
 x[[1]]
 x$bar
 x["bar"]
+x[c(2,3)]
+name <- "foo"
+x[[name]] ## computed index for 'foo'
+x$name ## elements 'name' doesn't exist
+x$foo ## element 'foo' does exist
