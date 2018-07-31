@@ -82,3 +82,10 @@ x[1, 2]
 x[1,]
 x[,2]
 x[1, 2, drop = FALSE]
+x <- list(foo = 1:4)
+x$f
+x[["f", exact = FALSE]]
+x <- c(1, 2, NA, 3, NA)
+bad <- is.na(x)
+bad
+x[!bad]
