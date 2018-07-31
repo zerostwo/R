@@ -52,3 +52,39 @@ for(i in 1:9) {
 }
 
 ## while loops
+count <- 0
+while(count < 10) {
+  print(count)
+  count <- count + 1
+}
+
+s <- 0
+i <- 0
+while(i <= 100) {
+  s <- s + i
+  i <- i + 1
+}
+print(s)
+
+i <- 1
+j <- 1
+while(i < 10) {
+  while(j < 10) {
+    print(i * j)
+    i <- i + 1
+    j <- j + 1
+  }
+}
+
+z <- 5
+while(z >=3 && z <= 10) {
+  print(z)
+  coin <- rbinom(1,1,0.5)
+  
+  if(coin == 1) {
+    z <- z + 1
+  } else {
+    z <- z-1
+  }
+}
+
