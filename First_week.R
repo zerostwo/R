@@ -89,3 +89,59 @@ x <- c(1, 2, NA, 3, NA)
 bad <- is.na(x)
 bad
 x[!bad]
+table(bad)
+x <- c(1, 2, NA, 4, NA, 5)
+y <- c("a", NA, "b", "d", NA, "f")
+good <- complete.cases(x, y)
+good
+x[good]
+y[good]
+library(datasets)
+head(airquality)
+good <- complete.cases(airquality)
+airquality_clear <- airquality[good,]
+head(airquality_clear)
+summary(airquality)
+summary(airquality_clear)
+
+x <- 1:4; y <- 6:9
+x + y
+x > 2
+x >= 2
+y == 8
+x * y
+x / y
+
+x <- matrix(1:4, 2, 2); y <- matrix(rep(10,4), 2, 2)
+x * y
+x / y
+x %*% y ## true matrix multiplication
+x <- 1:4
+y <- 2
+class(x + y)
+
+x <- c(3,5,1, 10, 12, 6)
+x[x < 6] <- 0
+x[x %in% 1:5] <-0
+tail(airquality)
+airquality$Ozone[47]
+table(is.na(airquality$Ozone))
+mean(airquality$Ozone[!is.na(airquality$Ozone)])
+head(airquality)
+
+good <- complete.cases(airquality$Ozone, airquality$Temp, airquality$Solar.R)
+a <- airquality$Ozone[good] >31
+b <- airquality$Temp[good] > 90
+c <- a & b
+mean(airquality$Solar.R[good][c])
+
+head(airquality)
+
+t6 <- airquality$Month
+x <- airquality$Temp[t6]
+x
+mean(x)
+
+x <- airquality$Ozone[airquality$Month == 5]
+max(x[!is.na(x)])
+
