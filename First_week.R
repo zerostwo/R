@@ -70,3 +70,12 @@ name <- "foo"
 x[[name]] ## computed index for 'foo'
 x$name ## elements 'name' doesn't exist
 x$foo ## element 'foo' does exist
+x[[c(1,3)]]
+x <- list(a = list(10, 12, 14), b = c(3.14, 2.71))
+x[[c(1,3)]]
+x[[1]][[3]]
+x[[c(2,1)]]
+x <- matrix(1:6, 2, 3)
+x
+x[1, 2]
+## indices can also be missing
