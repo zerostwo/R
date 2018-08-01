@@ -136,3 +136,9 @@ columnmean <- function(y, removeNA = TRUE) {
 }
 columnmean(airquality)
 head(airquality)
+
+mydata <- rnorm(100)
+sd(x)
+plot(x)
+args(lm)
+lm(data = x, y~x, 1:100, model = F)
