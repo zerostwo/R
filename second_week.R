@@ -87,6 +87,10 @@ while(z >=3 && z <= 10) {
     z <- z-1
   }
 }
+## repeat, next, break
+
+
+
 
 ## fucntion
 add2 <- function(x, y) {
