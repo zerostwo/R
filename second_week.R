@@ -88,8 +88,24 @@ while(z >=3 && z <= 10) {
   }
 }
 ## repeat, next, break
+x0 <- 1
+tol <- 1e-8
 
+repeat {
+  x1 <- computeEstimate()
+  
+  if(abs(x1 - x0) < tol) {
+    break
+  } else {
+    x0 <- x1
+  }
+}
 
+for(i in 1:100) {
+  if(i > 20) {
+    next
+  }
+}
 
 
 ## fucntion
@@ -109,3 +125,14 @@ aboven <- function(x, n) {
 }
 x <- rnorm(1000000)
 hist(aboven(x, 1.5)) 
+
+columnmean <- function(y, removeNA = TRUE) {
+      nc <- ncol(y)
+      means <- numeric(nc)
+      for(i in 1:nc) {
+            means[i] <- mean(y[,i], na.rm = removeNA)
+      }
+      means
+}
+columnmean(airquality)
+head(airquality)
