@@ -141,4 +141,7 @@ mydata <- rnorm(100)
 sd(x)
 plot(x)
 args(lm)
-lm(data = x, y~x, 1:100, model = F)
+lm(data = mydata, y ~ x, 1:100, model = F)
+
+mydata <- rnorm(100)
+lm(y ~ x, mydata, 1:100, model = FALSE)
