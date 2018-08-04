@@ -191,3 +191,10 @@ x <- as.POSIXlt(x)
 x - y
 
 ## test
+x <- read.csv("specdata/001.csv", header = TRUE)
+head(x)
+names(x)
+class(x)
+z <- complete.cases(x$sulfate, x$nitrate)
+x <- x$sulfate[z]
+
