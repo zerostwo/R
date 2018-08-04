@@ -180,6 +180,6 @@ birth <- as.POSIXct("1999-05-24")
 unclass(dead) - unclass(birth)
 unclass(x) - unclass(birth)
 
-datestring <- c("January 10, 2018 10:40")
-x <- strptime(datestring, "%B %d, %Y %H:$M")
+datestring <- c("January 10, 2018 10:40", "December 9, 2017 9:10")
+x <- strptime(datestring, "%B %d, %Y %H:%M")
 x
