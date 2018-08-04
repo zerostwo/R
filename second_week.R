@@ -152,7 +152,34 @@ if(x > 5) {
 }
 
 ## Dates and Times
-x <- as.Date("1970-01-01")
+x <- as.Date("1999-05-24")
 x
 unclass(x)
 unclass(as.Date("1970-01-02"))
+
+weekdays(x)
+
+x <- Sys.time()
+x
+p <- as.POSIXlt(x)
+names(unclass(p))
+p$sec
+
+x <- Sys.time()
+x
+unclass(x)
+x$sec
+p <- as.POSIXlt(x)
+p$sec
+
+dead <- as.Date("2099-05-24")
+class(dead)
+dead <- as.POSIXct(dead)
+class(dead)
+birth <- as.POSIXct("1999-05-24")
+unclass(dead) - unclass(birth)
+unclass(x) - unclass(birth)
+
+datestring <- c("January 10, 2018 10:40")
+x <- strptime(datestring, "%B %d, %Y %H:$M")
+x
