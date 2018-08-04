@@ -150,4 +150,9 @@ x <- 1:10
 if(x > 5) {
         x <-0
 }
-dd6x
+
+## Dates and Times
+x <- as.Date("1970-01-01")
+x
+unclass(x)
+unclass(as.Date("1970-01-02"))
