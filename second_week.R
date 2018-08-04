@@ -183,3 +183,11 @@ unclass(x) - unclass(birth)
 datestring <- c("January 10, 2018 10:40", "December 9, 2017 9:10")
 x <- strptime(datestring, "%B %d, %Y %H:%M")
 x
+
+x <- as.Date("1999-05-24")
+y <- strptime("January 10, 2018 10:40", "%B %d, %Y %H:%M")
+x - y
+x <- as.POSIXlt(x)
+x - y
+
+## test
