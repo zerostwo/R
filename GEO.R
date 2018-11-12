@@ -50,3 +50,5 @@ plot(pca_result$scores[,2],pca_result$scores[,3],xlim = c(0,50),ylim = c(0,50))
 plot(pca_result$scores[,1],pca_result$scores[,3],xlim = c(0,50),ylim = c(0,50))
 
 table(fpkm$fpkm1 > 0)
+
+gene <- read.table(file = '~/duan',header = T,sep = '\t')
